@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" xmlns:ns1="*">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<mx:TabNavigator x="78" y="78" width="599" height="458">
+		<s:NavigatorContent label="Tab 1" width="100%"  height="100%">
+			<mx:ToggleButtonBar id="toggleButtonBar"
+								dataProvider="{css1}"  x="10" y="0" width="577"/>
+			<mx:ViewStack id="css1"
+						  width="593"
+						  height="380"
+						  visible="{toggleButtonBar.selectedIndex > -1}" x="0" y="29">
+				<mx:Canvas label="Basico">
+				</mx:Canvas>
+				<mx:Canvas label="Avanzado">
+					<s:TextArea x="10" y="5" width="578" height="333"/>
+					<s:HGroup x="10" y="346" width="578" height="27" verticalAlign="middle" textAlign="center">
+						<s:Button label="Recargar" x="238" y="324"/>
+						<s:Button label="Vista Previa" x="314" y="324"/>
+						<s:Button label="Guardar" x="390" y="324"/>
+					</s:HGroup>
+				</mx:Canvas>
+			</mx:ViewStack>
+		</s:NavigatorContent>
+		<s:NavigatorContent label="Tab 2" width="100%"  height="100%">
+			<mx:ToggleButtonBar id="toggleButtonBar2"
+								dataProvider="{css2}"  x="10" y="0" width="577"/>
+			<mx:ViewStack id="css2"
+						  width="593"
+						  height="380"
+						  visible="{toggleButtonBar.selectedIndex > -1}" x="0" y="29">
+				<mx:Canvas label="Basico">
+				</mx:Canvas>
+				<mx:Canvas label="Avanzado">
+					<s:TextArea x="10" y="5" width="578" height="333"/>
+					<s:HGroup x="10" y="346" width="578" height="27" verticalAlign="middle" textAlign="center">
+						<s:Button label="Recargar" x="238" y="324"/>
+						<s:Button label="Vista Previa" x="314" y="324"/>
+						<s:Button label="Guardar" x="390" y="324"/>
+					</s:HGroup>
+				</mx:Canvas>
+			</mx:ViewStack>
+		</s:NavigatorContent>
+	</mx:TabNavigator>
+</s:Application>
